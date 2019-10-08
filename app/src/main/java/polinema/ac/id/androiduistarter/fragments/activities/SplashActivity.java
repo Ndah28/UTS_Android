@@ -1,12 +1,11 @@
 package polinema.ac.id.androiduistarter.fragments.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import polinema.ac.id.androiduistarter.R;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-
-import polinema.ac.id.androiduistarter.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -18,8 +17,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this,WelcomeActivity.class));
-                finish();
+                startActivity(new Intent(SplashActivity.this, WelcomeActivity.class));
             }
         },1000);
     }
