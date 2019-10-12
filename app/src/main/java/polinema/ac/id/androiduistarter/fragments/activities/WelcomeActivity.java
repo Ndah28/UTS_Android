@@ -1,11 +1,5 @@
 package polinema.ac.id.androiduistarter.fragments.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-import polinema.ac.id.androiduistarter.R;
-
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +7,15 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import polinema.ac.id.androiduistarter.R;
 
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -23,6 +25,12 @@ public class WelcomeActivity extends AppCompatActivity {
     private  TextView[] dots;
     private int[] layouts;
     private Button btnSkip,btnNext;
+
+    public void clickLogin(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +45,6 @@ public class WelcomeActivity extends AppCompatActivity {
                 R.layout.welcome_slide1,
                 R.layout.welcome_slide2,
                 R.layout.welcome_slide3,
-                R.layout.welcome_slide4
         };
         addBottomDots(0);
         myViewPagerAdapter = new MyViewPagerAdapter();
@@ -87,7 +94,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen(){
-        startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+        startActivity(new Intent(WelcomeActivity.this,LoginActivity.class));
         finish();
     }
 

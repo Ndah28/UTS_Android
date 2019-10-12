@@ -1,18 +1,17 @@
 package polinema.ac.id.androiduistarter.fragments.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import androidx.fragment.app.Fragment;
 import polinema.ac.id.androiduistarter.R;
-import polinema.ac.id.androiduistarter.fragments.fragments.DiscountFragment;
-import polinema.ac.id.androiduistarter.fragments.fragments.FoodFragment;
-import polinema.ac.id.androiduistarter.fragments.fragments.MovieFragment;
+import polinema.ac.id.androiduistarter.fragments.fragments.Cek_Ongkir_Fragment;
+import polinema.ac.id.androiduistarter.fragments.fragments.Cek_Resi_Fragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadFragment(new FoodFragment());
+        loadFragment(new Cek_Resi_Fragment());
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
     }
@@ -40,14 +39,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Fragment fragment = null;
         switch (menuItem.getItemId()){
-            case R.id.action_food:
-                fragment = new FoodFragment();
+            case R.id.action_resi:
+                fragment = new Cek_Resi_Fragment();
                 break;
-            case R.id.action_movie:
-                fragment = new MovieFragment();
+            case R.id.action_ongkir:
+                fragment = new Cek_Ongkir_Fragment();
                 break;
-            case R.id.action_discount:
-                fragment = new DiscountFragment();
+            case R.id.action_exit:
+                finish();
                 break;
         }
         return loadFragment(fragment);
