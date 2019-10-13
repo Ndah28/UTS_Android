@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Cek Resi Dan Ongkir</string>
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
@@ -46,4 +46,13 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="send_request">Send Request</string>
     <string name="change_password">Change Password</string>
+
+<!--    dropdown-->
+    <string name="pilih_ekspedisi">Pilih Ekspedisi</string>
+    <string name="ekspedisi">Ekspedisi Pengiriman</string>
+    <string-array name="list_ekspedisi">
+        <item>Pos</item>
+        <item>Jnt</item>
+        <item>Jne</item>
+    </string-array>
 </resources>

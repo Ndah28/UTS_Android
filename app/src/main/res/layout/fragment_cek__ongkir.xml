@@ -1,14 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.fragments.Cek_Ongkir_Fragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/pilihkota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pilih Kota (asal - tujuan) :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="365dp" />
+
+    <EditText
+        android:id="@+id/berat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="52dp"
+        android:ems="10"
+        android:hint="Masukkan berat (kg)"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rb1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="49dp"
+        android:layout_height="93dp"
+        android:src="@drawable/koper"
+        app:layout_constraintEnd_toStartOf="@+id/berat"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rb1" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        android:text="Cek"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pilihkota"
+        app:layout_constraintVertical_bias="0.067">
+
+        <RadioButton
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Surabaya - Malang / Malang - Surabaya" />
+
+        <RadioButton
+            android:id="@+id/r2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Malang - Pasuruan /  Pasuruan - Malang"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="72dp" />
+
+        <RadioButton
+            android:id="@+id/r3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Surabaya - Pasuruan / Pasuruan - Surabaya"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="104dp" />
+
+        <RadioButton
+            android:id="@+id/r4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Malang - Madura / Madura - Malang"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <RadioButton
+            android:id="@+id/r5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pasuruan - Madura / Madura - Pasuruan"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="168dp" />
+
+        <RadioButton
+            android:id="@+id/r6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Surabaya - Madura / Madura - Surabaya"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="200dp" />
+
+        <RadioButton
+            android:id="@+id/r7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Malang - Blitar / Blitar - Malang"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="232dp" />
+
+        <RadioButton
+            android:id="@+id/r8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pasuruan - Blitar / Blitar - Pasuruan"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="264dp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
