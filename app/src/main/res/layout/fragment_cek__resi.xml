@@ -9,6 +9,19 @@
     <!-- TODO: Update blank fragment layout -->
 
 
+    <TextView
+        android:id="@+id/cekResiJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="CEK RESI"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/noResi"
         android:layout_width="246dp"
@@ -17,6 +30,7 @@
         android:layout_marginBottom="104dp"
         android:layout_weight="1"
         android:ems="10"
+        android:inputType="number"
         android:hint="Masukkan nomer resi"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -26,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Pilih Expedisi :"
+        android:text="Pilih Ekspedisi :"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,23 +59,14 @@
 
     <ImageButton
         android:id="@+id/btnCari"
-        android:layout_width="66dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="48dp"
         android:src="@android:drawable/ic_search_category_default"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
-
-    <ImageButton
-        android:id="@+id/btnCamera"
-        android:layout_width="66dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:src="@android:drawable/ic_menu_camera"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.329"
-        app:layout_constraintStart_toEndOf="@+id/btnCari"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -72,6 +77,7 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <RadioGroup
+        android:id="@+id/ekspedisi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
