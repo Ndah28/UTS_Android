@@ -7,6 +7,8 @@
     <color name="white">#FFFFFF</color>
     <color name="ijo">#008577</color>
     <color name="logobg">#01A5BB</color>
+    <color name="grey">#47565C</color>
+
 
     <!-- Screens background color-->
     <color name="bg_screen1">#f64c73</color>
